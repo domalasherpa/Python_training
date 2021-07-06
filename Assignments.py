@@ -46,8 +46,12 @@ num1 = int(input('Number 1: '))
 num2 = int(input('Number 2: '))
 randnum1 = random.randint(num1,num2)
 randnum2 = random.randint(num1,num2)
-Combination = math.factorial(randnum1) / (math.factorial(randnum1 - randnum2) * math.factorial(randnum2))
-print('Combination of (%d, %d) is: %.2f' %(randnum1, randnum2, Combination) )
+if(randnum1 >= randnum2):
+    Combination = math.factorial(randnum1) / (math.factorial(randnum1 - randnum2) * math.factorial(randnum2))
+    print('Combination of (%d, %d) is: %.2f' %(randnum1, randnum2, Combination) )
+else:
+    Combination = math.factorial(randnum2)/ (math.factorial(randnum2-randnum1) * math.factorial(randnum1))
+    print('Combination of (%d, %d) is: %.2f' %(randnum2, randnum1, Combination))
 
 
 
@@ -105,5 +109,5 @@ line1 = "I learnt about the basic I/O syntax - take an imput from the user and t
 line2 = "to know about some of the datatype in python like string, int and different syntax and methods to print them."
 line3 = "and about the concatenation of the string datatype in print function. And, how instead of declaring a variable"
 line4= "We could just assign a value to a variable. And, most of all i learnt to do some research and literate me by my own."
-
+print('\n')
 print(line1, line2, line3, line4)
