@@ -1,7 +1,6 @@
 
 # Convert tuples to list.
 
-from ast import Param
 import math 
 
 tuple = (1, 2, 3, 4, 'a', 'b', "apple", "ball")
