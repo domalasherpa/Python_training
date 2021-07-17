@@ -40,10 +40,12 @@ while poll:
         poll = False
 
 #to print the result of the poll
-for place in set(vacation):
-    count = vacation.count(place)
-    if count == 1:
-        print(f'{place.title()} : 1')
-    else:
-        print(f'{place.title()} : {count}')
+while vacation:
+    place = vacation.pop()
+    count = vacation.count(place) + 1
+    
+    while place in vacation:
+        vacation.remove(place)
 
+    print(f'{place.title()} : {count}')
+  
